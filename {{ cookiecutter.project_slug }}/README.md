@@ -12,7 +12,7 @@ There are 2 main functionalities of this project:
 
 2. [Optional] Announce to social media when you make a new PR or a PR got merged. To let the script get access to your social media account, tokens and secrets will need to be set up as environment variables (see next session).
 
-General customisation can be down with changing the properties of `config.yml`. For more fine grain customisation, please see advance usage session.
+General customisation can be done with changing the properties of `config.yml`. For more fine grain customisation, please see advance usage session.
 
 ## Preview
 
@@ -61,7 +61,7 @@ If you are running it on GitHub action, you will need to set up these variables 
 
 Other than trigger by a `push` event, the GitHub action workflow is set to run every day at a certain time, the time is set randomly. To set your own time, you can do to the `generate_svg.yml` and chage the `cron` setting. To understand more about how to set the time and the best practice, [please see the guide on GitHub Action here](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#schedule).
 
-For new PR/ merged PR activities, only those which is happening within a day will trigger a post to social media if it has been set up/.
+For new PR/ merged PR activities, only those which is happening within a day will trigger a post to social media if it has been set up.
 
 ## Extra program needed
 

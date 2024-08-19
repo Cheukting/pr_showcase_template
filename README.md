@@ -27,6 +27,8 @@ After pressing enter, you will have the follow options to input:
 - `mastodon`: optional, your Mastodon handle e.g. @example@demo.org
 - `linkedin`: optional, your LinkedIn profile page e.g. https://www.linkedin.com/in/<your_name>/
 
+After putting in all the options, a new directory will be generated. I would recommend [putting it on a GitHub repo](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github) and enable GitHub pages (step 6 [here](https://docs.github.com/en/pages/quickstart#creating-your-website)).
+
 ## Usage of the generated project
 
 There are 2 main functionalities of this project:
@@ -39,7 +41,7 @@ Example:
 
 2. [Optional] Announce to social media when you make a new PR or a PR got merged. To let the script get access to your social media account, tokens and secrets will need to be set up as environment variables (see next session).
 
-General customisation can be down with changing the properties of `config.yml`. For more fine grain customisation, please see advance usage session.
+General customisation can be done with changing the properties of `config.yml`. For more fine grain customisation, please see [advance usage](#advance-usage) session.
 
 ## Set up access token as environment variables
 
@@ -82,7 +84,7 @@ If you are running it on GitHub action, you will need to set up these variables 
 
 Other than trigger by a `push` event, the GitHub action workflow is set to run every day at a certain time, the time is set randomly. To set your own time, you can do to the `generate_svg.yml` and chage the `cron` setting. To understand more about how to set the time and the best practice, [please see the guide on GitHub Action here](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#schedule).
 
-For new PR/ merged PR activities, only those which is happening within a day will trigger a post to social media if it has been set up/.
+For new PR/ merged PR activities, only those which is happening within a day will trigger a post to social media if it has been set up.
 
 ## Extra program needed
 
