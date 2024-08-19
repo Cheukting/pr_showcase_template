@@ -3,7 +3,8 @@ username: {{ cookiecutter.github_username }}
 
 # public repos that you want to showcase
 repos:
-  {% for repo in cookiecutter.showcase_repos.split(',') %}- {{ repo.strip() }}{% endfor %}
+  {% for repo in cookiecutter.showcase_repos.split(',') %}- {{ repo.strip() }}
+  {% endfor %}
 
 # ===== SVG file settings =====
 
