@@ -1,7 +1,7 @@
 {
   "project_name": "PR Showcase",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
-  "gitHub_username": null,
+  "github_username": null,
   "showcase_repos": "pandas-dev/pandas, numpy/numpy",
   "output_svg_name": "output.svg",
   "pr_states": "all",
