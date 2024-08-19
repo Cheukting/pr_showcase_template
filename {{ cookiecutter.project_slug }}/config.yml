@@ -3,8 +3,7 @@ username: {{ cookiecutter.github_username }}
 
 # public repos that you want to showcase
 repos:
-  {% for repo in cookiecutter.showcase_repos.split(',') %}
-  - {{ repo.strip() }}{% endfor %}
+  {% for repo in cookiecutter.showcase_repos.split(',') %}- {{ repo.strip() }}{% endfor %}
 
 # ===== SVG file settings =====
 
@@ -46,18 +45,10 @@ apperance:
 social:
 
   # X (Twitter) handle e.g. @example
-  {% if cookiecutter.twitter %}
-  twitter: "{{ cookiecutter.twitter}}"
-  {% else %}
-  twitter:
-  {% endif %}
+  {% if cookiecutter.twitter %}twitter: "{{ cookiecutter.twitter}}"{% else %}twitter:{% endif %}
 
   # Mastodon handle e.g. @example@demo.org
-  {% if cookiecutter.mastodon %}
-  mastodon: "{{ cookiecutter.mastodon}}"
-  {% else %}
-  mastodon:
-  {% endif %}
+  {% if cookiecutter.mastodon %}mastodon: "{{ cookiecutter.mastodon}}"{% else %}mastodon:{% endif %}
 
   # LinkedIn profile page e.g. https://www.linkedin.com/in/<your_name>/
   linkedin: {{ cookiecutter.linkedin}}
