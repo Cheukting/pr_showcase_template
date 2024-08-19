@@ -47,14 +47,14 @@ apperance:
 social:
 
   # X (Twitter) handle e.g. @example
-  {%- if len(cookiecutter.twitter) > 0 -%}
+  {%- if cookiecutter.twitter -%}
   twitter: "{{ cookiecutter.twitter}}"
   {%- else -%}
   twitter:
   {%- endif -%}
 
   # Mastodon handle e.g. @example@demo.org
-  {%- if len(cookiecutter.mastodon) > 0 -%}
+  {%- if cookiecutter.mastodon -%}
   mastodon: "{{ cookiecutter.mastodon}}"
   {%- else -%}
   mastodon:
