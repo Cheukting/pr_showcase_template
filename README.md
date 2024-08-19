@@ -21,7 +21,7 @@ After pressing enter, you will have the follow options to input:
 - `output_style`: options are "full", "compact", if it is "full" it will show all the relevant PRs with title, if it is "compact" it will only show the PR counts for each repos.
 - `board_title`: the title that will show at the top of the generated svg
 
-**if you want to use post to social function, you have to provide the following and [setup access tokens](#set-up-access-token-as-environment-variables)**
+**if you want to use post to social function, you have to provide the following and [setup access tokens](#set-up-access-token-as-environment-variables), otherwise you can just press enter when asked**
 
 - `twitter`: optional, your X (Twitter) handle e.g. @example
 - `mastodon`: optional, your Mastodon handle e.g. @example@demo.org
