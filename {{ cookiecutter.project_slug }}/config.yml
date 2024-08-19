@@ -47,7 +47,7 @@ apperance:
 social:
 
   # X (Twitter) handle e.g. @example
-  twitter: "{{ cookiecutter.twitter}"
+  twitter: "{{ cookiecutter.twitter}}"
 
   # Mastodon handle e.g. @example@demo.org
   mastodon: "{{ cookiecutter.mastodon}}"
