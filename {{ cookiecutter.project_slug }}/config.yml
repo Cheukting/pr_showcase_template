@@ -5,7 +5,7 @@ username: {{ cookiecutter.github_username }}
 repos:
   {%- for repo in cookiecutter.showcase_repos.split(',') -%}
   - {{ repo.strip() }}
-  {%- endfor -%}
+  {% endfor %}
 
 # ===== SVG file settings =====
 
@@ -51,14 +51,14 @@ social:
   twitter: "{{ cookiecutter.twitter}}"
   {%- else -%}
   twitter:
-  {%- endif -%}
+  {% endif %}
 
   # Mastodon handle e.g. @example@demo.org
   {%- if cookiecutter.mastodon -%}
   mastodon: "{{ cookiecutter.mastodon}}"
   {%- else -%}
   mastodon:
-  {%- endif -%}
+  {% endif %}
 
   # LinkedIn profile page e.g. https://www.linkedin.com/in/<your_name>/
   linkedin: {{ cookiecutter.linkedin}}
