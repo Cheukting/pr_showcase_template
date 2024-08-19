@@ -1,0 +1,13 @@
+{
+  "project_name": "Cookiecutter Website Simple",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+  "gitHub_username": ,
+  "showcase_repos": "pandas-dev/pandas, numpy/numpy",
+  "output_svg_name": "output.svg",
+  "pr_states": "all",
+  "output_style": "full",
+  "board_title": "My contributions",
+  "twitter": "",
+  "mastodon": "",
+  "twitter": ""
+}

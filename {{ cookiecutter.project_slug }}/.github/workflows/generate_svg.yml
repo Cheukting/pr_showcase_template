@@ -1,0 +1,37 @@
+name: Generate SVG file
+on:
+  workflow_dispatch:
+  push:
+  schedule:
+    - cron: "{{ range(60) | random }} {{ range(24) | random }} * * *" # <=== Change this value
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          architecture: 'x64'
+      - name: Run script
+        env:
+          TOKEN: ${{ secrets.TOKEN }}
+          MASTODON_TOKEN: ${{ secrets.MASTODON_TOKEN }}
+          LINKEDIN_TOKEN: ${{ secrets.LINKEDIN_TOKEN }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+        run: |
+          sudo apt-get install ghostscript
+          sudo apt-get install potrace
+          pip install -r requirements.txt
+          python src/main.py
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "generated: $(date +'%Y-%m-%dT%H:%M:%S')"
+          git push

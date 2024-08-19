@@ -1,0 +1,56 @@
+# your GitHub user name
+username: {{ cookiecutter.github_username }}
+
+# public repos that you want to showcase
+repos:
+  {% for repo in cookiecutter.showcase_repos.split(',') %}
+  - {{ row.strip() }}
+  {% endfor %}
+
+# ===== SVG file settings =====
+
+# output svg file name
+output: {{ cookiecutter.output_svg_name}}
+
+# status of the PR that would be included: all, open, closed
+state: {{ cookiecutter.pr_states}}
+
+# style of the card: full, compact
+style: {{ cookiecutter.output_style}}
+
+apperance:
+
+  # title (optional)
+  title: {{ cookiecutter.board_title}}
+
+  # prioritized list of one or more font family names and/or generic family names seperated by commas (optional)
+  fonts: Arial, Helvetica, sans-serif
+
+  # size multiplyer: non-negative, recommend 0.8-1.5
+  size: 1
+
+  # color of the background (optional), if not given it will be transparent
+  bg_color: "white"
+
+  # The radius of the corners of the background: non-negative, recommend 5-15
+  bg_r: 8
+
+  # primary color
+  pri_color: "black"
+
+  # secondary color
+  sec_color: "grey"
+
+# ===== Social Media settings (optional) =====
+# post new pr/ merged pr to your social media account. Please see README for method to set up access tokens and secrets (required).
+
+social:
+
+  # X (Twitter) handle e.g. @example
+  twitter: "{{ cookiecutter.twitter}"
+
+  # Mastodon handle e.g. @example@demo.org
+  mastodon: "{{ cookiecutter.mastodon}}"
+
+  # LinkedIn profile page e.g. https://www.linkedin.com/in/<your_name>/
+  linkedin: {{ cookiecutter.linkedin}}
