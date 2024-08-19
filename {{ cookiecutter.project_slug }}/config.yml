@@ -5,7 +5,6 @@ username: {{ cookiecutter.github_username }}
 repos:
   {% for repo in cookiecutter.showcase_repos.split(',') %}- {{ repo.strip() }}
   {% endfor %}
-
 # ===== SVG file settings =====
 
 # output svg file name
